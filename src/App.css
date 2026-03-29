@@ -1,0 +1,14 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.hero {
+  background: linear-gradient(to right, #00000050, #00000050), url('./assets/hero.jfif');
+  background-size: cover;
+  background-position: center;
+  height: 84.3vh;
+
+  color: white;
+  
+}
