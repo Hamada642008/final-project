@@ -11,7 +11,7 @@ import Checkout from './pages/checkout'
 export default function App() {
 
   return (
-    <Router>
+    <Router basename='/final-project'>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Products />} />
