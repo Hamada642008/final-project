@@ -1,5 +1,5 @@
 import React from 'react'
-import {HashRouter as Router, Routes, Route} from 'react-router-dom'
+import { Routes, Route} from 'react-router-dom'
 import Home from './pages/home'
 import Products from './pages/Products'
 import Details from './pages/Details'
@@ -7,11 +7,14 @@ import Signup from './pages/signup'
 import Signin from './pages/signin'
 import Carts from './pages/carts'
 import Checkout from './pages/checkout'
+import Contact from './pages/contact'
+import About from './pages/about'
+import Services from './pages/services'
 
 export default function App() {
 
   return (
-    <Router basename='/final-project'>
+    
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Products />} />
@@ -20,7 +23,10 @@ export default function App() {
         <Route path='/signin'element={<Signin />} />
         <Route path='/carts' element={<Carts/>} />
         <Route path='/checkout' element={<Checkout/>} />
+        <Route path='/contact-us' element={<Contact/>} />
+        <Route path='/about' element={<About/>} />
+        <Route path='/services' element={<Services/>} />
       </Routes>
-    </Router>
+    
   )
 }

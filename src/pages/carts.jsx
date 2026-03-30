@@ -11,7 +11,9 @@ export default function Carts() {
     const [cart,setcart] = useState([])
     const [total,settotal] = useState(0)
 
-    localStorage.setItem('total',total)
+    useEffect(() => {
+        localStorage.setItem('total', total)
+    }, [total])
 
     useEffect(  ()=>{
         const fetchCart = async () => {
@@ -31,14 +33,14 @@ export default function Carts() {
             <Nav />
             <div className='w-[95%] mx-auto my-10'>
                 <h1 className='text-3xl font-semibold'>Shopping Cart</h1>
-                <div className='lg:flex gap-12 my-10'>
-                    <div>
+                <div className='flex flex-col lg:flex-row gap-6 lg:gap-12 my-6 lg:my-10'>
+                    <div className='w-full lg:w-2/3'>
                         {cart.length === 0 ? (
                             <p>No items yet</p>
                         ) : (
                             cart.map(item => (
-                                <div key={item.product_id} className="lg:flex gap-4 my-4 bg-white p-3 rounded-lg">
-                                    <img src={`/image/${item.image}`} alt={item.name} className=" h-96 w-full object-cover" />
+                                <div key={item.product_id} className="flex flex-col sm:flex-row gap-4 my-4 bg-white p-3 rounded-lg">
+                                <img src={`/image/${item.image}`} alt={item.name} className="w-full sm:w-40 h-48 sm:h-40 object-cover rounded-md"/>
                                     <div>
                                         <h2 className="font-semibold">{item.name}</h2>
                                         <p>{item.price} EGP</p>
@@ -58,7 +60,7 @@ export default function Carts() {
                             ))
                         )}
                     </div>
-                    <div className='bg-white p-4 space-y-4 h-full sticky top-60 rounded-2xl shadow-2xs'>
+                    <div className='bg-white p-4 space-y-4 w-full lg:w-1/3 rounded-2xl shadow-md lg:sticky lg:top-24'>
                         <h1 className='text-2xl font-semibold'>Order Summary</h1>
                         <div className='flex justify-between'>
                             <p className='text-gray-500'>Subtotal</p>

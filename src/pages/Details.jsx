@@ -36,14 +36,14 @@ export default function Details() {
         
         <>
             <Nav/>
-            <div className='w-[95%] mx-auto my-9 py-3 '>
+            <div className='w-[95%] mx-auto my-6 py-3 '>
                 <div className='lg:flex gap-12'>
                     <div className=' bg-gray-200 rounded-lg overflow-hidden aspect-square'>
                         <img className=' rounded-xl object-cover h-full w-full' src={`../../public/image/${data.image}`}  alt="" />
                     </div>
 
 
-                    <div className='shadow-2xl h-lvh p-9 rounded-md bg-white'>
+                    <div className='shadow-2xl w-full lg:w-1/2 p-5 sm:p-7 lg:p-9 rounded-md bg-white'>
                         <div className='text-3xl my-2 space-y-3'>
                             <h1 className='font-bold'>{data.name}</h1>
                             <p>$ {data.price}</p>
@@ -71,7 +71,7 @@ export default function Details() {
                                 navigate('/carts');
 
                             }catch{
-                                alert('Faild to add cart');
+                                alert('Faild to add cart \n please login ');
                             }
                             }} className='text-2xl bg-gray-950 hover:bg-gray-800 text-white p-3  rounded-lg w-full '>Add to cart</button>
                     </div>

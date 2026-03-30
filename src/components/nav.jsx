@@ -9,7 +9,7 @@ export default function Nav() {
 
 
     return (
-        <nav className=" sticky top-0 z-50 bg-white shadow-sm py-1">
+        <nav className=" sticky top-0 z-50 bg-white shadow-sm py-2">
             <div className="w-[95%] mx-auto">
                 <div className="flex gap-5  my-3 align-baseline">
             <div className="flex gap-2 items-center">
@@ -21,17 +21,17 @@ export default function Nav() {
                 <a href="/" className="text-md  hover:text-gray-400">
                     Home
                 </a>
-                <a href="#" className="text-md  hover:text-gray-400">
+                <a href="/about" className="text-md  hover:text-gray-400">
                     About Us
                 </a>
-                <a href="#" className="text-md  hover:text-gray-400">
+                <a href="/services" className="text-md  hover:text-gray-400">
                     Services
                 </a>
         
                 <a href="/products" className="text-md  hover:text-gray-400">
                     Products
                 </a>
-                <a href="#" className="text-md  hover:text-gray-400">
+                <a href="/contact-us" className="text-md  hover:text-gray-400">
                     Contact Us
                 </a>
             </div>
@@ -79,17 +79,7 @@ export default function Nav() {
             </div>
         </div>
                 
-                <div className="flex gap-2 my-3">
-                    <input
-                    type="text"
-                    placeholder="Search..."
-                    name="product"
-                    className="border border-gray-300 rounded-sm outline-none p-1 w-full"
-                    />
-                    <button className=" hover:bg-gray-200 cursor-pointer p-1 rounded-md">
-                    <FaSearch />
-                    </button>
-                </div>
+                
                 
             </div>
         </nav>

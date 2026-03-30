@@ -41,7 +41,7 @@ export default function Products() {
             <Nav/>
                 <div className='my-9 w-[95%] mx-auto py-5 '>
                     <header className=''>
-                        <h1 className='text-3xl'>All Products</h1>
+                        <h1 className='text-3xl text-black'>All Products</h1>
                         <p className='text-gray-500 text-md'>Showing 8 results</p>
                     </header>
                     <section className='flex gap-5 py-5'>
